@@ -6,8 +6,8 @@ import (
 	"crypto/x509"
 	"encoding/pem"
 	"errors"
-	"io/ioutil"
 	"log"
+	"os"
 
 	"github.com/go-acme/lego/v3/lego"
 	"github.com/go-acme/lego/v3/registration"
@@ -34,7 +34,7 @@ func (u *User) GetPrivateKey() crypto.PrivateKey {
 
 func main() {
 	// TODO(jdt): use a flag or something not hardcoded
-	key, err := ioutil.ReadFile("./key")
+	key, err := os.ReadFile("./key")
 	if err != nil {
 		log.Fatal(err)
 	}
