@@ -9,8 +9,8 @@ import (
 	"log"
 	"os"
 
-	"github.com/go-acme/lego/v3/lego"
-	"github.com/go-acme/lego/v3/registration"
+	"github.com/go-acme/lego/v4/lego"
+	"github.com/go-acme/lego/v4/registration"
 )
 
 // User implements the registration.User interface
